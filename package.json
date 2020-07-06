@@ -5,5 +5,9 @@
   "repository": "git@github.com:railgun-project/railgun-project.github.io.git",
   "author": "gsxhnd <gsxhnd@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
 }

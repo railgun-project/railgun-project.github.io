@@ -1,0 +1,23 @@
+name: blog deploy
+
+on:
+  push:
+    branches:
+      - source
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - run: npm install
+      - run: npm run docs:build
+      - run: cp CNAME docs/.vuepress/dist/
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2.5.0
+        env:
+          ACTIONS_DEPLOY_KEY: ${{secrets.key}}
+          PUBLISH_BRANCH: master
+          PUBLISH_DIR: docs/.vuepress/dist
