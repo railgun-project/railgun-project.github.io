@@ -1,0 +1,12 @@
+title: "Railgun"
+description: "Railgun Project"
+
+themeConfig:
+  nav:
+    - text: "Projetc"
+      ariaLabel: "project menu"
+      items:
+        - text: "Asio"
+          link: "/project/asio/"
+        - text: "LastOrder"
+          link: "/project/last_order/"
