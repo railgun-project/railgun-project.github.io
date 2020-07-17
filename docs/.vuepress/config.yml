@@ -1,12 +1,20 @@
 title: "Railgun"
-description: "Railgun Project"
-
+description: "Railgun Doc"
 themeConfig:
+  sidebarDepth: 3
   nav:
-    - text: "Projetc"
-      ariaLabel: "project menu"
-      items:
-        - text: "Asio"
-          link: "/project/asio/"
-        - text: "LastOrder"
-          link: "/project/last_order/"
+    - text: "Home"
+      link: "/"
+    - text: "Doc"
+      link: "/doc/"
+    - text: "API"
+      link: "/api/"
+    - text: "Github"
+      link: "https://github.com/railgun-project/railgun"
+  sidebar:
+    /doc/:
+      - "":
+        title: Document
+        collapsable: false
+        children:
+          - "test"
